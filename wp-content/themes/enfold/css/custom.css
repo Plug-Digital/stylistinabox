@@ -3,7 +3,142 @@
 /* General Custom CSS */
 
 
+/* Custom Gravity Forms */
+	/*General Settings */
+	.quiz-form-container {
+		max-width: 800px;
+		margin: 0 auto;
+	}
 
+	/* Form Step Progress */
+	.gform_wrapper .quiz-form-container .gf_step {
+		width: 25%;
+		margin: 0;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_step span.gf_step_number {
+		display: none;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_step {
+		text-align: center;
+		opacity: 1;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_page_steps .gf_step_first {
+		text-align: left;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_page_steps .gf_step_last {
+		text-align: right;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_page_steps {
+		position: relative;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_page_steps::before {
+		content: "";
+		width: 100%;
+		height: 20px;
+		position: absolute;
+		background-color: #cecece;
+		top: -20px;
+		left: 0;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_step {
+		position: relative;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_step_completed::before {
+		content: "";
+		width: 100%;
+		height: 20px;
+		position: absolute;
+		background-color: red;
+		top: -27px;
+		left: 0;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_step_active::before {
+		content: "";
+		width: 50%;
+		height: 20px;
+		position: absolute;
+		background-color: red;
+		top: -27px;
+		left: 0;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_step_first.gf_step_active::before {
+		width: 10%;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_step_last.gf_step_active::before {
+		width: 100%;
+	}
+
+	/* Step1 - About You */
+	.gform_wrapper .custom-radio-group ul.gfield_radio > li {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 20px;
+	}
+
+	#top .gform_wrapper .custom-radio-group input {
+		margin-top: 0;
+	}
+
+	#top .gform_wrapper .custom-radio-group ul.gfield_radio li label {
+		margin-left: 5px;
+	}
+
+	.gform_wrapper .image-radio-group ul.gfield_radio > li {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 20px;
+	}
+
+	#top .gform_wrapper .image-radio-group input {
+		margin-top: 5px;
+		vertical-align: top;
+	}
+
+	#top .gform_wrapper .image-radio-group ul.gfield_radio li label {
+		margin-left: 5px;
+		vertical-align: top;
+	}
+
+	#top .gform_wrapper .image-radio-group ul.gfield_radio li label span {
+		display: block;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	#top .gform_wrapper .image-radio-group ul.gfield_radio li label img {
+		margin: 0 auto;
+	}
+
+	/* Step2 - Style */
+
+	.gform_wrapper .image-checkbox-container ul.gfield_checkbox li {
+		display: inline-block;
+		width: 33%;
+		text-align: center;
+	}
+
+	#top .gform_wrapper .image-checkbox-container input {
+		display: none;
+	}
+
+	#top .gform_wrapper .image-checkbox-container label img {
+		border: 3px solid transparent;
+	}
+
+	#top .gform_wrapper .image-checkbox-container input:checked + label img {
+		border: 3px solid black;
+	}
 
 /*
 Desktop Styles
