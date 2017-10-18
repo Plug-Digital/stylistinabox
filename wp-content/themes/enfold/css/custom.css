@@ -10,6 +10,48 @@
 		margin: 0 auto;
 	}
 
+	.quiz-form-container .step-title {
+		text-align: left;
+	    font-size: 28px;
+	    font-style: italic;
+	}
+
+	#top .gform_wrapper .quiz-form-container ul li.field_description_below + li.gsection {
+		margin-bottom: 24px;
+	}
+
+	#top .gform_wrapper input, #top .gform_wrapper select {
+		max-width: 200px;
+	}
+
+	.gform_wrapper .quiz-form-container .top_label .hide-label .gfield_label {
+		display: none;
+	}
+
+	#top .gform_wrapper .quiz-form-container ul li.gfield.side-desc {
+		display: inline-block;
+		font-size: 0;
+	    min-width: 200px;
+	}
+
+	body .gform_wrapper .quiz-form-container .top_label li.gfield.side-desc div.ginput_container {
+		width: 60%;
+	    margin: 0 !important;
+	    font-size: 20px;
+	    display: inline-block;
+	}
+
+	#top .gform_wrapper li.gfield.side-desc select {
+		width: 100%;
+	}
+
+	.gform_wrapper .field_description_below.side-desc .gfield_description {
+		display: inline-block;
+	    width: 40%;
+	    font-size: 12px;
+	    text-align: center;
+	}
+
 	/* Form Step Progress */
 	.gform_wrapper .quiz-form-container .gf_step {
 		width: 25%;
@@ -18,6 +60,10 @@
 
 	.gform_wrapper .quiz-form-container .gf_step span.gf_step_number {
 		display: none;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_step span.gf_step_label {
+		font-size: 	20px;
 	}
 
 	.gform_wrapper .quiz-form-container .gf_step {
@@ -35,6 +81,7 @@
 
 	.gform_wrapper .quiz-form-container .gf_page_steps {
 		position: relative;
+		font-size: 0;
 	}
 
 	.gform_wrapper .quiz-form-container .gf_page_steps::before {
@@ -43,12 +90,14 @@
 		height: 20px;
 		position: absolute;
 		background-color: #cecece;
-		top: -20px;
+		top: -25px;
 		left: 0;
+		border-radius: 10px;
 	}
 
 	.gform_wrapper .quiz-form-container .gf_step {
 		position: relative;
+		display: inline-block;
 	}
 
 	.gform_wrapper .quiz-form-container .gf_step_completed::before {
@@ -56,9 +105,9 @@
 		width: 100%;
 		height: 20px;
 		position: absolute;
-		background-color: red;
-		top: -27px;
+		top: -25px;
 		left: 0;
+		background-color: #00ff00;
 	}
 
 	.gform_wrapper .quiz-form-container .gf_step_active::before {
@@ -66,17 +115,36 @@
 		width: 50%;
 		height: 20px;
 		position: absolute;
-		background-color: red;
-		top: -27px;
+		top: -25px;
 		left: 0;
+		background-color: #00ff00;
 	}
 
 	.gform_wrapper .quiz-form-container .gf_step_first.gf_step_active::before {
 		width: 10%;
+	    border-radius: 10px 0 0 10px;
 	}
 
 	.gform_wrapper .quiz-form-container .gf_step_last.gf_step_active::before {
 		width: 100%;
+		border-radius: 0 10px 10px 0;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_step_first.gf_step_completed::before {
+		border-radius: 10px 0 0 10px;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_step_last.gf_step_completed::before {
+		border-radius: 0 10px 10px 0;
+	}
+
+	#top .gform_wrapper ul li.gfield.height-label {
+		margin: 0 !important;
+	}
+
+	#top .gform_wrapper ul li.gfield.height-label p {
+		margin: 0 !important;
+		font-weight: bold;
 	}
 
 	/* Step1 - About You */
@@ -118,6 +186,12 @@
 
 	#top .gform_wrapper .image-radio-group ul.gfield_radio li label img {
 		margin: 0 auto;
+		max-width: 150px;
+		border: 2px solid transparent;
+	}
+
+	#top .gform_wrapper .image-radio-group ul.gfield_radio li input:checked + label img {
+		border: 2px solid black;
 	}
 
 	/* Step2 - Style */
@@ -160,4 +234,59 @@ Mobile Styles
 @media only screen and (max-width: 767px) {
   /* Add your Mobile Styles here */
 
+  	.quiz-form-container .step-title {
+  		font-size: 24px;
+	    font-weight: bold;
+  	}
+
+  	.gform_wrapper .quiz-form-container .gf_step span.gf_step_label {
+		font-size: 16px;
+	}
+
+	#top .gform_wrapper .quiz-form-container ul li.gfield {
+		margin-bottom: 0px;
+	}
+
+	#top .quiz-form-container label {
+		font-size: 16px;
+	    word-break: break-word;
+	}
+
+	body .gform_wrapper .top_label div.ginput_container {
+		margin-top: 0px;
+	}
+
+	#top .gform_wrapper input, #top .gform_wrapper select {
+		font-size: 12px;
+	}
+
+	body .gform_wrapper .quiz-form-container .top_label div.ginput_container.ginput_container_address {
+		padding: 20px;
+    	border: 1px solid black;
+	}
+
+	#top .gform_wrapper .custom-radio-group ul.gfield_radio li label {
+		margin-left: 0;
+	}
+
+	.gform_wrapper .custom-radio-group ul.gfield_radio > li {
+		margin: 0 10px;
+	}
+
+	.gform_wrapper .quiz-form-container ul.gfield_checkbox li, .gform_wrapper ul.gfield_radio li {
+		margin-bottom: 5px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.gform_wrapper .image-checkbox-container ul.gfield_checkbox li {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 510px) {
+	#top .quiz-form-container .gform_page_footer .button {
+		display: inline-block;
+		width: auto;
+	}
 }
