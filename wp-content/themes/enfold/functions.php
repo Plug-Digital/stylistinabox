@@ -298,7 +298,7 @@ if(!function_exists('avia_register_frontend_scripts'))
 
 	function avia_register_frontend_scripts()
 	{
-		$vn = "4.1";
+		$vn = "4.2";
 		
 		$template_url 		= get_template_directory_uri();
 		$child_theme_url 	= get_stylesheet_directory_uri();
