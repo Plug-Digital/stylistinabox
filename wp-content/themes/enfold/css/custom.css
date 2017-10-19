@@ -14,6 +14,7 @@
 		text-align: left;
 	    font-size: 28px;
 	    font-style: italic;
+	    font-weight: lighter;
 	}
 
 	#top .gform_wrapper .quiz-form-container ul li.field_description_below + li.gsection {
@@ -22,6 +23,13 @@
 
 	#top .gform_wrapper input, #top .gform_wrapper select {
 		max-width: 200px;
+		background-color: #ffffff;
+    	border-color: #b77d64;
+    	font-weight: lighter;
+	}
+
+	#top .gform_wrapper .gform_page_footer input, #top .gform_wrapper .gform_page_footer select {
+		background: #b77d64;
 	}
 
 	.gform_wrapper .quiz-form-container .top_label .hide-label .gfield_label {
@@ -32,6 +40,26 @@
 		display: inline-block;
 		font-size: 0;
 	    min-width: 200px;
+	}
+
+	#top label {
+		font-weight: lighter;
+
+	}
+
+	#top .gform_wrapper .quiz-form-container .gfield_checkbox li label, #top .gform_wrapper .quiz-form-container .gfield_radio li label {
+		font-weight: lighter;
+	}
+
+	#top .main_color .quiz-form-container input[type='text'] {
+		font-weight: lighter;
+		background-color: #ffffff;
+		border-color: #b77d64;
+	}
+
+	#top .gform_wrapper .quiz-form-container input, #top .gform_wrapper .quiz-form-container select {
+		font-weight: lighter;
+		font-family: 'Lato', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	}
 
 	body .gform_wrapper .quiz-form-container .top_label li.gfield.side-desc div.ginput_container {
@@ -50,6 +78,10 @@
 	    width: 40%;
 	    font-size: 12px;
 	    text-align: center;
+	}
+
+	.gform_wrapper select option {
+		font-weight: lighter;
 	}
 
 	/* Form Step Progress */
@@ -107,7 +139,7 @@
 		position: absolute;
 		top: -25px;
 		left: 0;
-		background-color: #00ff00;
+		background-color: #b77d64;
 	}
 
 	.gform_wrapper .quiz-form-container .gf_step_active::before {
@@ -117,7 +149,7 @@
 		position: absolute;
 		top: -25px;
 		left: 0;
-		background-color: #00ff00;
+		background-color: #b77d64;
 	}
 
 	.gform_wrapper .quiz-form-container .gf_step_first.gf_step_active::before {
@@ -191,7 +223,7 @@
 	}
 
 	#top .gform_wrapper .image-radio-group ul.gfield_radio li input:checked + label img {
-		border: 2px solid black;
+		border: 2px solid #b77d64;
 	}
 
 	/* Step2 - Style */
@@ -210,8 +242,30 @@
 		border: 3px solid transparent;
 	}
 
+	#top .gform_wrapper .quiz-form-container .image-checkbox-container .gfield_checkbox li label {
+		margin: 0;
+		position: relative;
+	}
+
 	#top .gform_wrapper .image-checkbox-container input:checked + label img {
-		border: 3px solid black;
+		border: 3px solid #b77d64;
+		position: relative;
+	}
+
+	#top .gform_wrapper .image-checkbox-container input:checked + label::before {
+		content: "\2713";
+		color: #ffffff;
+		line-height: 30px;
+		font-weight: bold;
+		position: absolute;
+		background-color: #b77d64;
+		border-radius: 100%;
+		width: 30px;
+		height: 30px;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		transform: translate(-50%, -50%);
 	}
 
 /*
