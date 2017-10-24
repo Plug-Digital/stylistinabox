@@ -118,6 +118,9 @@
 
 		do_action('um_after_new_user_register', $user_id, $args);
 
+		wp_redirect(get_permalink( get_page_by_path( 'get-started' ) ));
+		exit;
+		
 		return $user_id;
 	}
 
