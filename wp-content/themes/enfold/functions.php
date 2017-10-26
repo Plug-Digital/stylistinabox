@@ -567,3 +567,20 @@ require_once( 'functions-enfold.php');
  */
 // add_theme_support('avia_template_builder_custom_css');
 
+
+add_action('template_redirect', 'formRedirect');
+
+function formRedirect()
+{
+    if ( !is_page( 'get-started' ) || current_user_can('administrator'))
+        return;
+
+    global $ultimatemember;
+
+    if(is_user_logged_in()) {
+    	$styleProfile = um_user('style_profile')[0];
+    	$redirectUrl = get_site_url() . '/get-started/' . strtolower($styleProfile);
+    	wp_redirect( $redirectUrl );
+        exit;
+    }
+}
