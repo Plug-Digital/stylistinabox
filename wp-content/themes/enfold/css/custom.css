@@ -272,21 +272,21 @@
 /*
 
 /* Payment Page */
-	.sc-uea-container {
+	#top .sc-uea-container {
 	    /*display: flex;*/
 	}
 
-	.sc-uea-currency {
+	#top .sc-uea-currency {
 	    margin-right: 10px;
 	}
 
-	.sc-uea-custom-amount {
+	#top .sc-uea-custom-amount {
 		margin-bottom: 0;
 	    width: calc(100% - 40px);
 		display: inline-block;
 	}
 
-	.sc-payment-btn {
+	#top .sc-payment-btn {
 		background-color: #b77d64;
 	    color: #ffffff;
 	    border-color: #955b42;
@@ -303,7 +303,7 @@
 	    cursor: pointer;
 	}
 
-	.parsley-errors-list {
+	#top .parsley-errors-list {
 	    list-style: none;
 	    margin-bottom: 5px;
 	    line-height: 1;
