@@ -270,6 +270,36 @@
 	}
 
 /*
+
+/* Payment Page */
+	.sc-uea-container {
+	    display: flex;
+	}
+
+	.sc-uea-currency {
+	    margin-right: 10px;
+	}
+
+	.sc-uea-custom-amount {
+		margin-bottom: 0;
+	}
+
+	.sc-payment-btn {
+		background-color: #b77d64;
+	    color: #ffffff;
+	    border-color: #955b42;
+	    border-style: solid;
+	    border-bottom: 1px solid;
+	    border-left: none;
+	    border-right: none;
+	    border-top: none;
+	    border-radius: 3px;
+	    padding: 9px;
+	    font-size: 16px;
+	    color: #ffffff;
+	    border: 2px #b77d64 solid;
+	    cursor: pointer;
+	}
 Desktop Styles
 ================================================== */
 /* Note: Add new css to the media query below that you want to only effect the desktop view of your site */
