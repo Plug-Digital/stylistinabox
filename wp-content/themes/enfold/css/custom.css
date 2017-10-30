@@ -280,7 +280,7 @@
 	    margin-right: 10px;
 	}
 
-	#top .sc-uea-custom-amount {
+	#top .sc-uea-container .sc-uea-custom-amount {
 		margin-bottom: 0;
 	    width: calc(100% - 40px);
 		display: inline-block;
