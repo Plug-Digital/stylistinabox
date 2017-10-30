@@ -273,7 +273,7 @@
 
 /* Payment Page */
 	.sc-uea-container {
-	    display: flex;
+	    /*display: flex;*/
 	}
 
 	.sc-uea-currency {
@@ -282,6 +282,8 @@
 
 	.sc-uea-custom-amount {
 		margin-bottom: 0;
+	    width: calc(100% - 40px);
+		display: inline-block;
 	}
 
 	.sc-payment-btn {
@@ -299,6 +301,13 @@
 	    color: #ffffff;
 	    border: 2px #b77d64 solid;
 	    cursor: pointer;
+	}
+
+	.parsley-errors-list {
+	    list-style: none;
+	    margin-bottom: 5px;
+	    line-height: 1;
+	    font-size: 80%;
 	}
 Desktop Styles
 ================================================== */
