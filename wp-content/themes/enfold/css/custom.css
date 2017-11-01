@@ -85,6 +85,22 @@
 		font-weight: lighter;
 	}
 
+	#ui-datepicker-div .ui-datepicker-header {
+	    background-color: #ffffff;
+	}
+
+	#ui-datepicker-div.ui-datepicker a {
+		background-color: #955b42;
+	}
+
+	#ui-datepicker-div td.ui-datepicker-unselectable.ui-state-disabled {
+	    background-color: #cecece;
+	}
+
+	#ui-datepicker-div .ui-datepicker-calendar .ui-state-default {	
+	    background: #ffffff;
+	}
+
 	/* Form Step Progress */
 	.gform_wrapper .quiz-form-container .gf_step {
 		width: 25%;
@@ -120,7 +136,7 @@
 	.gform_wrapper .quiz-form-container .gf_page_steps::before {
 		content: "";
 		width: 100%;
-		height: 20px;
+		height: 3px;
 		position: absolute;
 		background-color: #cecece;
 		top: -25px;
@@ -136,7 +152,7 @@
 	.gform_wrapper .quiz-form-container .gf_step_completed::before {
 		content: "";
 		width: 100%;
-		height: 20px;
+		height: 3px;
 		position: absolute;
 		top: -25px;
 		left: 0;
@@ -146,16 +162,31 @@
 	.gform_wrapper .quiz-form-container .gf_step_active::before {
 		content: "";
 		width: 50%;
-		height: 20px;
+		height: 3px;
 		position: absolute;
 		top: -25px;
 		left: 0;
 		background-color: #b77d64;
 	}
 
+	.gform_wrapper .quiz-form-container .gf_step_active::after {
+		content: "";
+	    width: 20px;
+	    height: 20px;
+	    position: absolute;
+	    top: -33px;
+	    left: calc(50% - 10px);
+	    border-radius: 100%;
+	    background-color: #b77d64;
+	}
+
 	.gform_wrapper .quiz-form-container .gf_step_first.gf_step_active::before {
 		width: 10%;
 	    border-radius: 10px 0 0 10px;
+	}
+
+	.gform_wrapper .quiz-form-container .gf_step_first.gf_step_active::after {
+		left: 10px;
 	}
 
 	.gform_wrapper .quiz-form-container .gf_step_last.gf_step_active::before {
