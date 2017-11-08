@@ -1,0 +1,193 @@
+/*
+    Style for wp-full-stripe forms.  Mostly a cut down version of Twitter Bootstrap css
+    made so it doesn't interfere with the current theme
+*/
+
+@media (max-width: 479px) {
+    .wpfs-payment-form label, .wpfs-checkout-form label {
+        display: block;
+        margin-bottom: 1px;
+    }
+
+    /* size classes */
+    .wpfs-payment-form .input-mini {
+        width: 35%;
+    }
+
+    .wpfs-payment-form .input-small {
+        width: 35%;
+    }
+
+    .wpfs-payment-form .input-medium {
+        width: 50%;
+    }
+
+    .wpfs-payment-form .input-large {
+        width: 100%;
+    }
+
+    .wpfs-payment-form .input-xlarge {
+        width: 100%;
+    }
+
+    .wpfs-payment-form .input-xxlarge {
+        width: 100%;
+    }
+}
+
+@media (min-width: 480px) {
+    .wpfs-payment-form label, .wpfs-checkout-form label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    /* bootstrap horizontal form */
+    .wpfs-payment-form.form-horizontal input, .wpfs-checkout-form.form-horizontal input {
+        display: inline-block;
+        *display: inline;
+        /* IE7 inline-block hack */
+
+        *zoom: 1;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+
+    .wpfs-payment-form.form-horizontal .control-group, .wpfs-checkout-form.form-horizontal .control-group {
+        margin-bottom: 20px;
+        *zoom: 1;
+    }
+
+    .wpfs-payment-form.form-horizontal .control-group:before,
+    .wpfs-payment-form.form-horizontal .control-group:after,
+    .wpfs-checkout-form.form-horizontal .control-group:before,
+    .wpfs-checkout-form.form-horizontal .control-group:after {
+        display: table;
+        content: "";
+        line-height: 0;
+    }
+
+    .wpfs-payment-form.form-horizontal .control-group:after,
+    .wpfs-checkout-form.form-horizontal .control-group:after {
+        clear: both;
+    }
+
+    .wpfs-payment-form.form-horizontal .control-label,
+    .wpfs-checkout-form.form-horizontal .control-label {
+        float: left;
+        width: 160px;
+        padding-top: 5px;
+        text-align: right;
+    }
+
+    .wpfs-payment-form.form-horizontal .controls,
+    .wpfs-checkout-form.form-horizontal .controls {
+        *display: inline-block;
+        *padding-left: 20px;
+        margin-left: 180px;
+        *margin-left: 0;
+    }
+
+    .wpfs-payment-form.form-horizontal .controls:first-child,
+    .wpfs-checkout-form.form-horizontal .controls:first-child {
+        *padding-left: 180px;
+    }
+
+    .wpfs-payment-form.form-horizontal .help-block,
+    .wpfs-checkout-form.form-horizontal .help-block {
+        margin-bottom: 0;
+    }
+
+    .wpfs-payment-form.form-horizontal input + .help-block,
+    .wpfs-payment-form.form-horizontal select + .help-block,
+    .wpfs-payment-form.form-horizontal textarea + .help-block,
+    .wpfs-payment-form.form-horizontal .uneditable-input + .help-block,
+    .wpfs-payment-form.form-horizontal .input-prepend + .help-block,
+    .wpfs-payment-form.form-horizontal .input-append + .help-block {
+        margin-top: 10px;
+    }
+
+    .wpfs-payment-form.form-horizontal .form-actions {
+        padding-left: 180px;
+    }
+
+    .wpfs-payment-form input[type="submit"].btn-block,
+    .wpfs-payment-form input[type="reset"].btn-block,
+    .wpfs-payment-form input[type="button"].btn-block {
+        width: 100%;
+    }
+
+    /* size classes */
+    .wpfs-payment-form .input-mini, .wpfs-checkout-form .input-mini {
+        min-width: 60px;
+        width: 25%;
+    }
+
+    .wpfs-payment-form .input-small, .wpfs-checkout-form .input-small {
+        min-width: 25%;
+        width: 35%;
+    }
+
+    .wpfs-payment-form .input-medium, .wpfs-checkout-form .input-medium {
+        min-width: 25%;
+        width: 50%;
+    }
+
+    .wpfs-payment-form .input-large, .wpfs-checkout-form .input-large {
+        min-width: 40%;
+        width: 80%;
+    }
+
+    .wpfs-payment-form .input-xlarge, .wpfs-checkout-form .input-xlarge {
+        min-width: 50%;
+        width: 100%;
+    }
+
+    .wpfs-payment-form .input-xxlarge, .wpfs-checkout-form .input-xxlarge {
+        width: 530px;
+    }
+
+    .wpfs-payment-form-custom label, .wpfs-checkout-form-custom label {
+        width: 100%;
+    }
+}
+
+.wpfs-payment-form input[type="text"],
+.wpfs-payment-form input[type="password"],
+.wpfs-payment-form select,
+.wpfs-checkout-form input[type="text"],
+.wpfs-checkout-form input[type="password"],
+.wpfs-checkout-form select {
+    display: inline-block;
+    padding: 4px 6px;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+.wpfs-payment-form legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.wpfs-payment-form-compact input, .wpfs-payment-form-compact textarea, .wpfs-payment-form-compact select, .wpfs-payment-form-compact input[type=password] {
+    border: 1px solid #B3B3B3;
+    width: 100%;
+    -moz-border-radius: 3px;
+    padding: 4px 6px;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+.wpfs-checkout-form {
+
+}
+
+.wpfs-checkout-form input[type="text"],
+.wpfs-checkout-form input[type="password"],
+.wpfs-checkout-form select {
+    display: inline-block;
+    padding: 4px 6px;
+    margin-bottom: 10px;
+    margin-left: 0;
+}

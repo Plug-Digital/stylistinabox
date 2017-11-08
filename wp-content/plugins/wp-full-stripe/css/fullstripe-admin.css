@@ -1,0 +1,78 @@
+.changelog-updates ul {
+    list-style: initial;
+    margin: initial;
+    padding: 0 0 0 40px;
+}
+
+.news-feed ul {
+    list-style: initial;
+    margin: initial;
+    padding: 0 0 0 40px;
+}
+
+span.form-action-last {
+    margin-left: 20px;
+}
+
+.ui-tooltip {
+    max-width: inherit;
+}
+
+.wp-list-table.payments .column-customer {
+}
+
+.wp-list-table.payments .column-payment {
+    width: 30%;
+}
+
+.wp-list-table.payments .column-payment_status {
+    width: 10%;
+}
+
+.wp-list-table.payments .column-created {
+}
+
+.wp-list-table .column-action {
+    white-space: nowrap;
+    width: 140px;
+    padding-right: 30px;
+}
+
+.wp-list-table.payments .column-action {
+    width: 50px;
+}
+
+.wp-list-table.subscribers .column-action {
+    width: 50px;
+}
+
+.wp-list-table.subscription-plans .column-action {
+    width: 100px;
+}
+
+.wp-list-table.subscription-plans .column-id_display_name {
+    width: 40%;
+}
+
+.about-wrap .changelog .feature-section p {
+    margin-top: 0.6em;
+    max-width: inherit;
+    margin-left: inherit;
+    margin-right: inherit;
+}
+
+#edit-payment-form-tabs a {
+    box-shadow: none;
+}
+
+#edit-checkout-form-tabs a {
+    box-shadow: none;
+}
+
+#edit-subscription-form-tabs a {
+    box-shadow: none;
+}
+
+.wpfs-tab-content {
+    display: block;
+}

@@ -1,0 +1,1 @@
+<p class="alert alert-error"><?php esc_html_e('This payment form is invalid. Please check the settings and shortcode attributes!', 'wp-full-stripe'); ?></p>

@@ -1,0 +1,11 @@
+.wpfs-about p {
+    margin-left: 0px !important;
+}
+
+.wpfs-about ul {
+    list-style: square inside;
+}
+
+.wpfs-about .about-text {
+    min-height: 30px;
+}

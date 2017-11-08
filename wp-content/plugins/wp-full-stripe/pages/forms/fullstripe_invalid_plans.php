@@ -1,0 +1,1 @@
+<p class="alert alert-error"><?php _e('This subscription form has no valid plans defined. Please check the settings!', 'wp-full-stripe'); ?></p>
