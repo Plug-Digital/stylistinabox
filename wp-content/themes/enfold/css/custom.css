@@ -194,6 +194,10 @@
 		border-radius: 0 10px 10px 0;
 	}
 
+	.gform_wrapper .quiz-form-container .gf_step_last.gf_step_active::after {
+		left: calc(100% - 10px);
+	}
+
 	.gform_wrapper .quiz-form-container .gf_step_first.gf_step_completed::before {
 		border-radius: 10px 0 0 10px;
 	}
@@ -339,6 +343,55 @@
 	    margin-bottom: 5px;
 	    line-height: 1;
 	    font-size: 80%;
+	}
+
+	#top .main_color .payment-form input[type='text'], #top .main_color .payment-form input[type='password'] {
+		display: block;
+		width: 100%;
+		margin: 0;
+	}
+
+	#top .main_color .payment-form input[type='text'].input-mini {
+		width: calc(50% - 10px);
+	    display: inline-block;
+	    vertical-align: middle;
+	}
+
+	#top .main_color .payment-form input[type='text'].input-mini + span {
+		display: inline-block;
+	    vertical-align: middle;
+	}
+
+	#top .wpfs-payment-form.form-horizontal .control-label {
+		width: 100%;
+    	text-align: left;
+	}
+
+	#top .wpfs-payment-form.form-horizontal .controls {
+		margin: 0;
+	}
+
+	#top #legend__stylistinabox_payment {
+		display: none;
+	}
+
+	#payment-form-submit__stylistinabox_payment {
+		background-color: #b77d64;
+	    color: #ffffff;
+	    border-color: #955b42;
+	    border-style: solid;
+	    border-bottom: 1px solid;
+	    border-left: none;
+	    border-right: none;
+	    border-top: none;
+	    border-radius: 3px;
+	    padding: 9px;
+	    font-size: 16px;
+	    color: #ffffff;
+	    border: 2px #b77d64 solid;
+	    cursor: pointer;
+	    display: block;
+	    margin: 0 auto;
 	}
 Desktop Styles
 ================================================== */
