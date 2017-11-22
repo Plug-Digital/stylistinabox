@@ -395,6 +395,16 @@
 	    width: 50%;
 	}
 /* How it works page */
+#how_it_works_page > .container {
+    max-width: initial;
+    width: 100%;
+    padding: 0;
+}
+
+#how_it_works_page .step-container .step-item {
+	margin-bottom: 20px;
+}
+
 #how_it_works_page .step-item .step-numbering {
     display: inline-block;
     width: 100px;
