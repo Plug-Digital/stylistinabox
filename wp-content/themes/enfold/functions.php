@@ -312,8 +312,18 @@ if(!function_exists('avia_register_frontend_scripts'))
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'wp-mediaelement' );
 
-		wp_enqueue_script( 'avia-custom',  $template_url.'/js/custom.js');
-
+		wp_register_script( 'avia-custom',  $template_url.'/js/custom.js');
+		if(is_user_logged_in()) {
+			global $ultimatemember;
+			
+	    	$userInfo = array(
+				'first_name' => um_user('first_name'),
+				'last_name' => um_user('last_name')
+			);
+			wp_localize_script( 'avia-custom', 'user_info', $userInfo );
+	    }
+	    wp_enqueue_script( 'avia-custom' );
+		
 
 		if ( is_singular() && get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }
 

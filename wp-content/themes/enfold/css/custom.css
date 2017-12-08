@@ -22,13 +22,17 @@
 	}
 
 	#top .gform_wrapper input, #top .gform_wrapper select {
-		max-width: 200px;
+		max-width: 250px;
 		background-color: #ffffff;
     	border-color: #b77d64;
     	font-weight: lighter;
 	}
 
 	#top .gform_wrapper .gform_page_footer input, #top .gform_wrapper .gform_page_footer select {
+		background: #b77d64;
+	}
+
+	#top .gform_wrapper .gform_footer input, #top .gform_wrapper .gform_footer select {
 		background: #b77d64;
 	}
 
@@ -434,6 +438,19 @@
     font-weight: bold;
 }
 
+#how_it_works_page .um-form {
+	background: #ffffff;
+	padding: 20px;
+}
+
+#how_it_works_page .um-104.um .um-field-label {
+	color: #000000;
+	font-weight: bold;
+}
+
+#how_it_works_page .um-field-checkbox-option, #how_it_works_page .um-field-radio-option {
+	color: #000000 !important;
+}
 
 Desktop Styles
 ================================================== */
