@@ -72,7 +72,7 @@
         $('.fullstripe-form-input[data-stripe="exp-year"]').keyup(function () {
             var v = $(this).val();
             var matches = v.match(/\d{1,4}/g);
-            var exp-year = matches && matches[0] || '';
+            var expYear = matches && matches[0] || '';
             
             $(this).val(expYear);
         });
