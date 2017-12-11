@@ -547,7 +547,7 @@ Mobile Styles
 	    transform: none;
 	}
 
-	#top #wrap_all #socket .social_bookmarks li a {
+	#top #wrap_all #socket .social_bookmarks li {
 	    margin-right: 5px;
 	}
 
