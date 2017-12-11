@@ -1,0 +1,85 @@
+img, video {
+	height: auto;
+	max-width: 100%;
+}
+.wpl-logo-carousel .wpl-logo {
+	outline: none;
+	margin: 0 6px;
+	border: 1px solid #DDDDDD;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-ms-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+/* Dots */
+div.wpl-logo-carousel.wpl-logo-carousel-free-area ul.slick-dots {
+	margin: 10px 0 0 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+div.wpl-logo-carousel.wpl-logo-carousel-free-area ul.slick-dots li {
+	display: inline-table;
+	position: relative;
+	margin: 0;
+}
+
+div.wpl-logo-carousel.wpl-logo-carousel-free-area ul.slick-dots li button {
+	font-size: 0;
+	line-height: 0;
+	display: block;
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+	color: transparent;
+	border: 0;
+	outline: none;
+	background-color: #bbbbbb;
+	margin: 4px;
+	padding: 0;
+	border-radius: 50%;
+}
+
+div.wpl-logo-carousel.wpl-logo-carousel-free-area ul.slick-dots li.slick-active button {
+	background-color: #f5903b;
+}
+
+/* Navigation */
+div.wpl-logo-carousel.wpl-logo-carousel-free-area .slick-prev,
+div.wpl-logo-carousel.wpl-logo-carousel-free-area .slick-next {
+	font-size: 20px;
+	line-height: 30px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	cursor: pointer;
+	color: #afafaf;
+	outline: none;
+	border: none;
+	background-color: #f0f0f0;
+	position: absolute;
+	text-align: center;
+	top: -45px;
+	z-index: 22;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+div.wpl-logo-carousel.wpl-logo-carousel-free-area .slick-prev:hover,
+div.wpl-logo-carousel.wpl-logo-carousel-free-area .slick-next:hover {
+	background-color: #f5903b;
+	color: #ffffff;
+}
+
+div.wpl-logo-carousel.wpl-logo-carousel-free-area .slick-prev {
+	right: 42px;
+}
+
+div.wpl-logo-carousel.wpl-logo-carousel-free-area .slick-next {
+	right: 6px;
+}

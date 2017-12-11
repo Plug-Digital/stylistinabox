@@ -1,0 +1,22 @@
+.wpllc-pro-notice {
+	padding: 25px;
+}
+
+.wpllc-pro-notice .wpllc-text {
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+
+/*
+Carousel Custom Publish button
+*/
+#wpl_lcf_create_carousel_metabox.postbox .inside{
+	padding: 0 15px 15px;
+}
+#wpl_lcf_create_carousel_metabox.postbox .inside #major-publishing-actions{
+	border-top: none;
+	background: transparent;
+}
+#wpl_lcf_create_carousel_metabox.postbox .inside #delete-action i{
+	font-size: 22px;
+}
