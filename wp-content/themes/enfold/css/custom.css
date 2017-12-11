@@ -473,6 +473,12 @@
     width: 40px;
 }
 
+#top div#wpl-logo-carousel-420.wpl-logo-carousel .wpl-logo {
+    vertical-align: middle;
+    display: inline-block;
+    float: none;
+}
+
 Desktop Styles
 ================================================== */
 /* Note: Add new css to the media query below that you want to only effect the desktop view of your site */
