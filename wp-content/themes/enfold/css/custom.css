@@ -452,6 +452,24 @@
 	color: #000000 !important;
 }
 
+#top #socket .social_bookmarks {
+    float: none;
+    position: absolute;
+    left: 0;
+    width: auto;
+    text-align: center;
+    margin: 0;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+}
+
+#top #wrap_all #socket .social_bookmarks li a {
+    font-size: 30px;
+    width: 40px;
+    margin-right: 30px;
+}
+
 Desktop Styles
 ================================================== */
 /* Note: Add new css to the media query below that you want to only effect the desktop view of your site */
@@ -518,6 +536,18 @@ Mobile Styles
 @media only screen and (max-width: 600px) {
 	.gform_wrapper .image-checkbox-container ul.gfield_checkbox li {
 		width: 50%;
+	}
+
+	#top #socket .social_bookmarks {
+	    left: auto;
+	    right: 0;
+	    transform: none;
+	}
+
+	#top #wrap_all #socket .social_bookmarks li a {
+	    font-size: 20px;
+	    width: 20px;
+	    margin-right: 5px;
 	}
 }
 

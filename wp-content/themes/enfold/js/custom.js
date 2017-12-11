@@ -76,5 +76,9 @@
             
             $(this).val(expYear);
         });
+
+        $('.user-info-first-name input').val(user_info.first_name);
+        $('.user-info-last-name input').val(user_info.last_name);
+        $('.user-info-full-name input').val(user_info.first_name + ' ' + user_info.last_name);
     });
 })(jQuery);
