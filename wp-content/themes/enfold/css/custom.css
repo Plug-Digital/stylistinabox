@@ -464,10 +464,13 @@
     transform: translateX(-50%);
 }
 
+#top #wrap_all #socket .social_bookmarks li {
+    margin-right: 30px;
+}
+
 #top #wrap_all #socket .social_bookmarks li a {
     font-size: 30px;
     width: 40px;
-    margin-right: 30px;
 }
 
 Desktop Styles
@@ -545,9 +548,12 @@ Mobile Styles
 	}
 
 	#top #wrap_all #socket .social_bookmarks li a {
+	    margin-right: 5px;
+	}
+
+	#top #wrap_all #socket .social_bookmarks li a {
 	    font-size: 20px;
 	    width: 20px;
-	    margin-right: 5px;
 	}
 }
 
