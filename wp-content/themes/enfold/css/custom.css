@@ -477,6 +477,7 @@
     vertical-align: middle;
     display: inline-block;
     float: none;
+    padding: 0px 20px;
 }
 
 Desktop Styles
@@ -540,6 +541,11 @@ Mobile Styles
 	.gform_wrapper .quiz-form-container ul.gfield_checkbox li, .gform_wrapper ul.gfield_radio li {
 		margin-bottom: 5px;
 	}
+
+	.responsive #top #wrap_all #how_it_works_page > .container {
+		width: 100%;
+    	max-width: initial;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -567,5 +573,16 @@ Mobile Styles
 	#top .quiz-form-container .gform_page_footer .button {
 		display: inline-block;
 		width: auto;
+	}
+
+	#how_it_works_page .step-item .step-numbering {
+	    width: 50px;
+	    height: 50px;
+	    line-height: 50px;
+	    font-size: 30px;
+	}
+
+	#how_it_works_page .step-item .step-content {
+	    width: calc(100% - 80px);
 	}
 }
