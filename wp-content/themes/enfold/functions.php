@@ -620,6 +620,7 @@ function formRedirect()
     global $ultimatemember;
 
     if(is_user_logged_in()) {
+    	$styleProfile 		= um_user('style_profile')[0];
     	$redirectUrl = get_site_url() . '/get-started/' . strtolower($styleProfile);
     	wp_redirect( $redirectUrl );
         exit;
