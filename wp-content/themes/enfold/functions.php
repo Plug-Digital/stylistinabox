@@ -591,6 +591,7 @@ add_action('template_redirect', 'formRedirect');
 function formRedirect()
 {
 	if(is_user_logged_in() && is_page('my-form')) {
+		global $ultimatemember;
 		global $wpdb;
     	global $userFormId;
 
