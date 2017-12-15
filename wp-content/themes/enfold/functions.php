@@ -616,6 +616,8 @@ function formRedirect()
 				$styleProfile 		= um_user('style_profile')[0];
 				if($post->post_name != strtolower($styleProfile)) {
 					$redirectUrl = get_site_url() . '/get-started/' . strtolower($styleProfile);
+					wp_redirect( $redirectUrl );
+	        		exit;
 				}
 			}
 		}
@@ -642,6 +644,8 @@ function formRedirect()
 				$styleProfile 		= um_user('style_profile')[0];
 				if($post->post_name != strtolower($styleProfile)) {
 					$redirectUrl = get_site_url() . '/my-form/' . strtolower($styleProfile);
+					wp_redirect( $redirectUrl );
+	        		exit;
 				}
 			}
 		}
