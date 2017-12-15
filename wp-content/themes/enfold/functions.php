@@ -612,7 +612,9 @@ function formRedirect()
 
 	 //    $entries = GFAPI::get_entries($form_id, $search_criteria, array(), array());
 	    // if(count($entries) > 0) {
-	    	$redirectUrl = get_site_url() . "/my-form/" . strtolower($styleProfile);
+    	$redirectUrl = get_site_url() . "/my-form/" . strtolower($styleProfile);
+    	wp_redirect( $redirectUrl );
+        exit;
 	    // }
 	}
     if ( !is_page( 'get-started' ) || current_user_can('administrator'))
