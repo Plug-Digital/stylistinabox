@@ -593,11 +593,36 @@ function formRedirect()
 	global $post;
 	global $ultimatemember;
 
-	if(is_page()) {
+	if(is_page() && !current_user_can('administrator')) {
 		$parentSlug = '';
 		if($post->post_parent > 0) {
 			$parentPost = get_post($post->post_parent);
 			$parentSlug = $parentPost->post_name;	
+		}
+
+		global $wpdb;
+
+		$entries = array();
+		if(is_user_logged_in()) {
+			$styleProfile 		= um_user('style_profile')[0];
+			$form_table_name 	= GFFormsModel::get_form_table_name();
+			$result          	= $wpdb->get_var(
+									$wpdb->prepare(
+										" SELECT id FROM {$form_table_name}
+							              WHERE title=%s", $styleProfile
+									)
+								);
+			$result = intval( $result );
+
+			if($result > 0) {
+				$current_user = wp_get_current_user();
+		    	$current_user_id = $current_user->ID;
+
+				$search_criteria["field_filters"][] = array("key" => "status", "value" => "active");
+			    $search_criteria["field_filters"][] = array("key" => "created_by", "value" => $current_user_id);
+
+			    $entries = GFAPI::get_entries($form_id, $search_criteria, array(), array());
+			}
 		}
 
 		if(is_page('get-started') && is_user_logged_in()) {
