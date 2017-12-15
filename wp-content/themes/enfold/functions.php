@@ -590,42 +590,79 @@ add_action('template_redirect', 'formRedirect');
 
 function formRedirect()
 {
-	if(is_user_logged_in() && is_page('my-form')) {
-		global $ultimatemember;
-		global $wpdb;
-    	global $userFormId;
+	global $post;
+	global $ultimatemember;
 
-    	$styleProfile 		= um_user('style_profile')[0];
-		// $form_table_name 	= GFFormsModel::get_form_table_name();
-		// $result          	= $wpdb->get_var(
-		// 						$wpdb->prepare(
-		// 							" SELECT id FROM {$form_table_name}
-		// 				              WHERE title=%s", $styleProfile
-		// 						)
-		// 					);
-		// $userFormId = intval( $result );
-		// $current_user = wp_get_current_user();
-  //   	$current_user_id = $current_user->ID;
+	if(is_page()) {
+		$parentSlug = '';
+		if($post->post_parent > 0) {
+			$parentPost = get_post($post->post_parent);
+			$parentSlug = $parentPost->post_name;	
+		}
 
-		// $search_criteria["field_filters"][] = array("key" => "status", "value" => "active");
-	 //    $search_criteria["field_filters"][] = array("key" => "created_by", "value" => $current_user_id);
+		if(is_page('get-started') && is_user_logged_in()) {
+	    	$styleProfile 		= um_user('style_profile')[0];
+	    	$redirectUrl = get_site_url() . '/get-started/' . strtolower($styleProfile);
+	    	wp_redirect( $redirectUrl );
+	        exit;
+		}
 
-	 //    $entries = GFAPI::get_entries($form_id, $search_criteria, array(), array());
-	    // if(count($entries) > 0) {
-    	$redirectUrl = get_site_url() . "/my-form/" . strtolower($styleProfile);
-    	wp_redirect( $redirectUrl );
-        exit;
-	    // }
+		if($parentSlug == 'get-started') {
+			if(!is_user_logged_in()) {
+				$redirectUrl = get_site_url() . '/get-started';
+		    	wp_redirect( $redirectUrl );
+		        exit;
+			} else {
+				$styleProfile 		= um_user('style_profile')[0];
+				if($post->post_name != strtolower($styleProfile)) {
+					$redirectUrl = get_site_url() . '/get-started/' . strtolower($styleProfile);
+				}
+			}
+		}
+
+		if(is_page('my-form')) {
+			if(is_user_logged_in()) {
+				$styleProfile 		= um_user('style_profile')[0];
+		    	$redirectUrl = get_site_url() . '/my-form/' . strtolower($styleProfile);
+		    	wp_redirect( $redirectUrl );
+		        exit;
+			} else {
+		    	$redirectUrl = get_site_url() . '/get-started';
+		    	wp_redirect( $redirectUrl );
+		        exit;
+			}
+		}
+
+		if($parentSlug == 'get-started') {
+			if(!is_user_logged_in()) {
+				$redirectUrl = get_site_url() . '/get-started';
+		    	wp_redirect( $redirectUrl );
+		        exit;
+			} else {
+				$styleProfile 		= um_user('style_profile')[0];
+				if($post->post_name != strtolower($styleProfile)) {
+					$redirectUrl = get_site_url() . '/my-form/' . strtolower($styleProfile);
+				}
+			}
+		}
 	}
-    if ( !is_page( 'get-started' ) || current_user_can('administrator'))
-        return;
+	// if(is_user_logged_in() && is_page('my-form') && !current_user_can('administrator')) {
+	// 	global $ultimatemember;
 
-    global $ultimatemember;
+ //    	$styleProfile 		= um_user('style_profile')[0];
+ //    	$redirectUrl = get_site_url() . "/my-form/" . strtolower($styleProfile);
+ //    	wp_redirect( $redirectUrl );
+ //        exit;
+	// }
+ //    if ( !is_page( 'get-started' ) || current_user_can('administrator'))
+ //        return;
 
-    if(is_user_logged_in()) {
-    	$styleProfile 		= um_user('style_profile')[0];
-    	$redirectUrl = get_site_url() . '/get-started/' . strtolower($styleProfile);
-    	wp_redirect( $redirectUrl );
-        exit;
-    }
+ //    global $ultimatemember;
+
+ //    if(is_user_logged_in()) {
+ //    	$styleProfile 		= um_user('style_profile')[0];
+ //    	$redirectUrl = get_site_url() . '/get-started/' . strtolower($styleProfile);
+ //    	wp_redirect( $redirectUrl );
+ //        exit;
+ //    }
 }
