@@ -585,18 +585,41 @@ require_once( 'functions-enfold.php');
  */
 // add_theme_support('avia_template_builder_custom_css');
 
-
+flush_rewrite_rules(true);
 add_action('template_redirect', 'formRedirect');
 
 function formRedirect()
 {
+	if(is_user_logged_in()) {
+		global $wpdb;
+    	global $userFormId;
+
+    	$styleProfile 		= um_user('style_profile')[0];
+		$form_table_name 	= GFFormsModel::get_form_table_name();
+		$result          	= $wpdb->get_var(
+								$wpdb->prepare(
+									" SELECT id FROM {$form_table_name}
+						              WHERE title=%s", $styleProfile
+								)
+							);
+		$userFormId = intval( $result );
+		$current_user = wp_get_current_user();
+    	$current_user_id = $current_user->ID;
+
+		$search_criteria["field_filters"][] = array("key" => "status", "value" => "active");
+	    $search_criteria["field_filters"][] = array("key" => "created_by", "value" => $current_user_id);
+
+	    $entries = GFAPI::get_entries($form_id, $search_criteria, array(), array());
+	    if(count($entries) > 0) {
+	    	$redirectUrl = get_site_url() . '/my-form';
+	    }
+	}
     if ( !is_page( 'get-started' ) || current_user_can('administrator'))
         return;
 
     global $ultimatemember;
 
     if(is_user_logged_in()) {
-    	$styleProfile = um_user('style_profile')[0];
     	$redirectUrl = get_site_url() . '/get-started/' . strtolower($styleProfile);
     	wp_redirect( $redirectUrl );
         exit;

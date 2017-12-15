@@ -580,6 +580,8 @@ Mobile Styles
 	    height: 50px;
 	    line-height: 50px;
 	    font-size: 30px;
+	    vertical-align: top;
+    	margin-top: 0.85em;
 	}
 
 	#how_it_works_page .step-item .step-content {
