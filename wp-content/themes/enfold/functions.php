@@ -611,9 +611,9 @@ function formRedirect()
 	 //    $search_criteria["field_filters"][] = array("key" => "created_by", "value" => $current_user_id);
 
 	 //    $entries = GFAPI::get_entries($form_id, $search_criteria, array(), array());
-	    if(count($entries) > 0) {
+	    // if(count($entries) > 0) {
 	    	$redirectUrl = get_site_url() . "/my-form/" . strtolower($styleProfile);
-	    }
+	    // }
 	}
     if ( !is_page( 'get-started' ) || current_user_can('administrator'))
         return;
