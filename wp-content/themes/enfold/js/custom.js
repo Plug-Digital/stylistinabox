@@ -30,6 +30,14 @@
 
     	});
 
+        $('.menu-item a[href="#get-started"]').on('click', function(e) {
+            e.preventDefault();
+            if($('#get-started').length == 0) {
+                window.location.href = "/get-started";
+            }
+            return true;
+        });
+
         $('.fullstripe-form-input[data-stripe="number"]').keyup(function () {
             var v = $(this).val().replace(/\s+/g, '').replace(/[^0-9]/gi, '');
             var matches = v.match(/\d{1,16}/g);
@@ -77,8 +85,11 @@
             $(this).val(expYear);
         });
 
-        $('.user-info-first-name input').val(user_info.first_name);
-        $('.user-info-last-name input').val(user_info.last_name);
-        $('.user-info-full-name input').val(user_info.first_name + ' ' + user_info.last_name);
+        if($('.user-info-first-name input').val() == '')
+            $('.user-info-first-name input').val(user_info.first_name);
+        if($('.user-info-last-name input').val() == '')
+            $('.user-info-last-name input').val(user_info.last_name);
+        if($('.user-info-full-name input').val() == '')
+            $('.user-info-full-name input').val(user_info.first_name + ' ' + user_info.last_name);
     });
 })(jQuery);
