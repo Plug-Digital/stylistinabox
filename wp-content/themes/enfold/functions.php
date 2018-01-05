@@ -705,15 +705,20 @@ function set_customer_price( $entry, $form ) {
     // get your user's ID here
     // EDITED -- this should work, 
     // if only logged-in users can submit the form
-    print_r($entry);
-    exit;
+    
     $user_id = $entry['created_by'];
     // set the arguments for the add_user_meta() function
-    $meta_key = 'gform_entry_id';
-    $meta_value = $entry['id'];
+    $meta_key = 'gform_customer_price';
+
+    $rangeArr = explode(' ­-­ ', $entry['38']);
+    $meta_value = str_replace('$', '', $rangeArr[1]);
+    print_r($meta_value);
+    exit;
+    
+	
     // if you want to pass both the Entry and Form IDs, you can use an array:
     // $meta_value = array( 'entry_id' => $entry['id'], 'form_id' => $form['id'] );
-    $unique = true;
+    $unique = false;
         // optional, but the default is false,
         // and if I understand your question, you want this to be unique
     add_user_meta( $user_id, $meta_key, $meta_value, $unique );
