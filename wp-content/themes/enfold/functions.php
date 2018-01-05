@@ -711,8 +711,8 @@ function set_customer_price( $entry, $form ) {
     $meta_key = 'gform_customer_price';
 
 	preg_match_all('/\$([0-9]+[\.]*[0-9]*)/', $entry[38], $match);
-	$meta_value = $match[1][1];
-    print_r($meta_value);
+	// $meta_value = $match[1][1];
+    var_dump($entry[38]);
     exit;
     
 	
