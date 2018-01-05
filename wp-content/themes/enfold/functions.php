@@ -321,9 +321,13 @@ if(!function_exists('avia_register_frontend_scripts'))
 		if(is_user_logged_in()) {
 			global $ultimatemember;
 			
+	    	$userId = get_current_user_id();
+			$priceRange = get_user_meta( $userId, 'gform_customer_price', true );
+
 	    	$userInfo = array(
+	    		'price_range' => !empty($priceRange) ? $priceRange : 2000,
 				'first_name' => um_user('first_name'),
-				'last_name' => um_user('last_name')
+				'last_name' => um_user('last_name'),
 			);
 			
 	    }
@@ -710,16 +714,15 @@ function set_customer_price( $entry, $form ) {
     // set the arguments for the add_user_meta() function
     $meta_key = 'gform_customer_price';
 
-	preg_match_all('/\$([0-9]+[\.]*[0-9]*)/', $entry[38], $match);
-	// $meta_value = $match[1][1];
-    var_dump($entry[38]);
-    exit;
-    
-	
-    // if you want to pass both the Entry and Form IDs, you can use an array:
-    // $meta_value = array( 'entry_id' => $entry['id'], 'form_id' => $form['id'] );
-    $unique = false;
-        // optional, but the default is false,
-        // and if I understand your question, you want this to be unique
-    add_user_meta( $user_id, $meta_key, $meta_value, $unique );
+    if($entry[38] != '') {
+    	preg_match_all('/\$([0-9]+[\.]*[0-9]*)/', $entry[38], $match);
+		$meta_value = $match[1][1];    
+		
+	    // if you want to pass both the Entry and Form IDs, you can use an array:
+	    // $meta_value = array( 'entry_id' => $entry['id'], 'form_id' => $form['id'] );
+	    $unique = false;
+	        // optional, but the default is false,
+	        // and if I understand your question, you want this to be unique
+	    add_user_meta( $user_id, $meta_key, $meta_value, $unique );
+    }
 }

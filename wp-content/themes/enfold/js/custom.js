@@ -38,6 +38,10 @@
             return true;
         });
 
+        var priceRange = parseInt(user_info.price_range) * 100;
+        priceRange = priceRange > 2000 ? priceRange : 2000;
+        $('#payment-form').attr('data-amount', user_info.price_range);
+
         $('.fullstripe-form-input[data-stripe="number"]').keyup(function () {
             var v = $(this).val().replace(/\s+/g, '').replace(/[^0-9]/gi, '');
             var matches = v.match(/\d{1,16}/g);
