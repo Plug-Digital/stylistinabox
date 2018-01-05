@@ -602,3 +602,26 @@ function formRedirect()
         exit;
     }
 }
+
+add_action( 'gform_after_submission', 'set_customer_price', 10, 2 );
+// to tie it to a specific form, use the format below,
+// replacing '{$form_id}' with the actual form ID
+// add_action( 'gform_after_submission_{$form_id}', 'set_customer_price', 10, 2 );
+
+function set_customer_price( $entry, $form ) {
+    // get your user's ID here
+    // EDITED -- this should work, 
+    // if only logged-in users can submit the form
+    print_r($entry);
+    exit;
+    $user_id = $entry['created_by'];
+    // set the arguments for the add_user_meta() function
+    $meta_key = 'gform_entry_id';
+    $meta_value = $entry['id'];
+    // if you want to pass both the Entry and Form IDs, you can use an array:
+    // $meta_value = array( 'entry_id' => $entry['id'], 'form_id' => $form['id'] );
+    $unique = true;
+        // optional, but the default is false,
+        // and if I understand your question, you want this to be unique
+    add_user_meta( $user_id, $meta_key, $meta_value, $unique );
+}
