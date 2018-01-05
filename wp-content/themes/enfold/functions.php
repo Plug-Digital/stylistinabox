@@ -632,12 +632,68 @@ function formRedirect()
 	        exit;
 		}
 
-    if(is_user_logged_in()) {
-    	$styleProfile = um_user('style_profile')[0];
-    	$redirectUrl = get_site_url() . '/get-started/' . strtolower($styleProfile);
-    	wp_redirect( $redirectUrl );
-        exit;
-    }
+		if($parentSlug == 'get-started') {
+			if(!is_user_logged_in()) {
+				$redirectUrl = get_site_url() . '/get-started';
+		    	wp_redirect( $redirectUrl );
+		        exit;
+			} else {
+				$styleProfile 		= um_user('style_profile')[0];
+				if($post->post_name != strtolower($styleProfile)) {
+					$redirectUrl = get_site_url() . '/get-started/' . strtolower($styleProfile);
+					wp_redirect( $redirectUrl );
+	        		exit;
+				}
+			}
+		}
+
+		if(is_page('my-form')) {
+			if(is_user_logged_in()) {
+				$styleProfile 		= um_user('style_profile')[0];
+		    	$redirectUrl = get_site_url() . '/my-form/' . strtolower($styleProfile);
+		    	wp_redirect( $redirectUrl );
+		        exit;
+			} else {
+		    	$redirectUrl = get_site_url() . '/get-started';
+		    	wp_redirect( $redirectUrl );
+		        exit;
+			}
+		}
+
+		if($parentSlug == 'get-started') {
+			if(!is_user_logged_in()) {
+				$redirectUrl = get_site_url() . '/get-started';
+		    	wp_redirect( $redirectUrl );
+		        exit;
+			} else {
+				$styleProfile 		= um_user('style_profile')[0];
+				if($post->post_name != strtolower($styleProfile)) {
+					$redirectUrl = get_site_url() . '/my-form/' . strtolower($styleProfile);
+					wp_redirect( $redirectUrl );
+	        		exit;
+				}
+			}
+		}
+	}
+	// if(is_user_logged_in() && is_page('my-form') && !current_user_can('administrator')) {
+	// 	global $ultimatemember;
+
+ //    	$styleProfile 		= um_user('style_profile')[0];
+ //    	$redirectUrl = get_site_url() . "/my-form/" . strtolower($styleProfile);
+ //    	wp_redirect( $redirectUrl );
+ //        exit;
+	// }
+ //    if ( !is_page( 'get-started' ) || current_user_can('administrator'))
+ //        return;
+
+ //    global $ultimatemember;
+
+ //    if(is_user_logged_in()) {
+ //    	$styleProfile 		= um_user('style_profile')[0];
+ //    	$redirectUrl = get_site_url() . '/get-started/' . strtolower($styleProfile);
+ //    	wp_redirect( $redirectUrl );
+ //        exit;
+ //    }
 }
 
 add_action( 'gform_after_submission', 'set_customer_price', 10, 2 );
