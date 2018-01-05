@@ -710,9 +710,8 @@ function set_customer_price( $entry, $form ) {
     // set the arguments for the add_user_meta() function
     $meta_key = 'gform_customer_price';
 
-    $rangeArr = explode(' ­-­ ', $entry[38]);
-    print_r($rangeArr);
-    $meta_value = str_replace('$', '', $rangeArr[1]);
+	preg_match_all('/\$([0-9]+[\.]*[0-9]*)/', $entry[38], $match);
+	$meta_value = $match[1][1];
     print_r($meta_value);
     exit;
     
