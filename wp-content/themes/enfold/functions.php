@@ -711,6 +711,7 @@ function set_customer_price( $entry, $form ) {
     $meta_key = 'gform_customer_price';
 
     $rangeArr = explode(' - ', $entry[38]);
+    print_r($rangeArr);
     $meta_value = str_replace('$', '', $rangeArr[1]);
     print_r($meta_value);
     exit;
