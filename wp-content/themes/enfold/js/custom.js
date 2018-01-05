@@ -40,7 +40,7 @@
 
         var priceRange = parseInt(user_info.price_range) * 100;
         priceRange = priceRange > 2000 ? priceRange : 2000;
-        $('#payment-form').attr('data-amount', user_info.price_range);
+        $('#payment-form').attr('data-amount', priceRange);
 
         $('.fullstripe-form-input[data-stripe="number"]').keyup(function () {
             var v = $(this).val().replace(/\s+/g, '').replace(/[^0-9]/gi, '');
